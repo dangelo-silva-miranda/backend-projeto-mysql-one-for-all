@@ -4,7 +4,7 @@ CREATE VIEW `estatisticas_musicais` AS
     (SELECT
       COUNT(AR.FULL_NAME)
     FROM
-      SpotifyClone.ARTISTS AR)  `artistas`,
+      SpotifyClone.ARTISTS AR) `artistas`,
     (SELECT
       COUNT(AL.TITLE)
     FROM
