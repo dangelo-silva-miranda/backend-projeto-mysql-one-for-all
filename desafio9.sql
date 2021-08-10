@@ -1,0 +1,18 @@
+DELIMITER $$
+CREATE PROCEDURE albuns_do_artista(IN FULL_NAME_ARTIST VARCHAR(100))
+BEGIN
+  SELECT
+    AR.FULL_NAME `artista`,
+    AL.TITLE `album`
+  FROM
+    SpotifyClone.ARTISTS AR
+      INNER JOIN
+    SpotifyClone.ALBUMS AL
+    ON AR.ARTIST_ID = AL.ARTIST_ID
+  WHERE
+    AR.FULL_NAME = FULL_NAME_ARTIST
+  ORDER BY
+    `album`;
+END $$
+
+DELIMITER ;
