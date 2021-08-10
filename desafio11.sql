@@ -1,7 +1,7 @@
 CREATE VIEW cancoes_premium AS
   SELECT
     S.TITLE `nome`,
-    COUNT(S.TITLE)
+    COUNT(S.TITLE) `reproducoes`
   FROM
     ((SpotifyClone.`HISTORY` H
       INNER JOIN
